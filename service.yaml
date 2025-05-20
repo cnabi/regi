@@ -3,6 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: registration-app
+  namespace: prod
 spec:
   selector:
     app: registration-app
@@ -10,3 +11,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 5000
+  type: NodePort
